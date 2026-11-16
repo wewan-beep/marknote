@@ -1,0 +1,183 @@
+/* MarkNote 全局样式与公众号风格 Markdown 排版 */
+
+:root {
+  --mn-bg: #ffffff;
+  --mn-sidebar: #f7f8fa;
+  --mn-text: #2b2b2b;
+  --mn-text-sub: #8a8f99;
+  --mn-border: #e8eaee;
+  --mn-primary: #3b82f6;
+  --mn-hover: #eef4ff;
+}
+
+* { box-sizing: border-box; }
+
+html, body, #app {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Segoe UI", Roboto, sans-serif;
+  color: var(--mn-text);
+  background: var(--mn-bg);
+}
+
+/* ---------- Markdown 预览（仿 mdnice 公众号排版） ---------- */
+.markdown-body {
+  max-width: 760px;
+  margin: 0 auto;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #333;
+  word-break: break-word;
+}
+
+.markdown-body h1 {
+  font-size: 22px;
+  line-height: 1.4;
+  margin: 26px 0 14px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #eee;
+  font-weight: 700;
+}
+
+.markdown-body h2 {
+  font-size: 19px;
+  margin: 24px 0 12px;
+  font-weight: 700;
+  border-left: 4px solid #3b82f6;
+  padding-left: 10px;
+}
+
+.markdown-body h3 {
+  font-size: 16px;
+  margin: 20px 0 10px;
+  font-weight: 700;
+}
+
+.markdown-body h4, .markdown-body h5, .markdown-body h6 {
+  font-size: 15px;
+  margin: 18px 0 8px;
+  font-weight: 700;
+}
+
+.markdown-body p {
+  margin: 12px 0;
+  letter-spacing: 0.4px;
+}
+
+.markdown-body blockquote {
+  margin: 14px 0;
+  padding: 10px 16px;
+  border-left: 4px solid #3b82f6;
+  background: #f5f9ff;
+  color: #5c6370;
+  font-size: 14px;
+  border-radius: 0 6px 6px 0;
+}
+
+.markdown-body blockquote p { margin: 4px 0; }
+
+.markdown-body ul, .markdown-body ol {
+  margin: 12px 0;
+  padding-left: 26px;
+}
+
+.markdown-body li { margin: 6px 0; }
+
+.markdown-body a {
+  color: #3b82f6;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(59, 130, 246, 0.35);
+}
+
+.markdown-body img {
+  max-width: 100%;
+  border-radius: 6px;
+  display: block;
+  margin: 12px auto;
+}
+
+.markdown-body hr {
+  border: 0;
+  border-top: 1px dashed #e3e6eb;
+  margin: 22px 0;
+}
+
+.markdown-body code {
+  font-family: Menlo, Consolas, Monaco, monospace;
+}
+
+.markdown-body code:not(pre code) {
+  background: #f2f4f7;
+  color: #d6336c;
+  padding: 2px 5px;
+  border-radius: 4px;
+  font-size: 13px;
+  margin: 0 2px;
+}
+
+.markdown-body pre {
+  margin: 16px 0;
+  padding: 14px 16px;
+  background: #f7f8fa;
+  border: 1px solid #eceef2;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.markdown-body pre code {
+  background: transparent;
+  color: inherit;
+  padding: 0;
+  font-size: 13px;
+}
+
+.markdown-body table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+  font-size: 14px;
+}
+
+.markdown-body th, .markdown-body td {
+  border: 1px solid #e3e6eb;
+  padding: 8px 12px;
+  text-align: left;
+}
+
+.markdown-body th {
+  background: #f5f7fa;
+  font-weight: 600;
+}
+
+.markdown-body .katex-display {
+  margin: 16px 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+/* ---------- 暗色预览 ---------- */
+html[data-theme="dark"] .markdown-body {
+  color: #d6d9de;
+}
+html[data-theme="dark"] .markdown-body code:not(pre code) {
+  background: #2a2f38;
+  color: #ff8fab;
+}
+html[data-theme="dark"] .markdown-body pre {
+  background: #1b1f27;
+  border-color: #2c333d;
+}
+html[data-theme="dark"] .markdown-body blockquote {
+  background: #1d2430;
+  color: #a9b1bd;
+}
+html[data-theme="dark"] .markdown-body th {
+  background: #232833;
+}
+html[data-theme="dark"] .markdown-body th,
+html[data-theme="dark"] .markdown-body td {
+  border-color: #2c333d;
+}

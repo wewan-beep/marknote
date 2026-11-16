@@ -1,0 +1,56 @@
+server:
+  port: 8080
+  servlet:
+    encoding:
+      charset: UTF-8
+      force: true
+
+spring:
+  application:
+    name: marknote-server
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://10.20.6.77:3307/marknote?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&useSSL=false
+    username: root
+    password: ww123456
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 2
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 20MB
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: Asia/Shanghai
+
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    banner: false
+    db-config:
+      id-type: auto
+
+minio:
+  endpoint: http://127.0.0.1:9000
+  # 浏览器访问图片用的地址，MinIO 在远程服务器时改成外网地址
+  public-endpoint: http://127.0.0.1:9000
+  access-key: minioadmin
+  secret-key: minioadmin
+  bucket-name: marknote
+
+jwt:
+  secret: marknote-secret-key-2026-very-long-secret-key-abcdef123456
+  expire: 86400000
+
+app:
+  # MinIO 不可用时，图片自动落到本地这个目录（相对或绝对路径均可）
+  upload-dir: ./uploads
+  # 本地图片对外访问前缀，需与后端实际访问地址一致
+  file-base-url: http://localhost:8080
+
+logging:
+  level:
+    com.marknote: info

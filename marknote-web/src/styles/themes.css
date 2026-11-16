@@ -1,0 +1,427 @@
+/* 公众号排版主题：只声明变量，结构差异在各自块里覆盖 */
+
+.markdown-body.mn-theme {
+  color: var(--t-text, #333);
+  font-size: var(--t-fs, 15px);
+  line-height: var(--t-lh, 1.85);
+  letter-spacing: var(--t-ls, 0.4px);
+  font-family: var(--t-font, -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Segoe UI", sans-serif);
+  background: var(--t-page, transparent);
+  padding: var(--t-page-padding, 0);
+  border-radius: var(--t-page-radius, 0);
+}
+
+.markdown-body.mn-theme h1 {
+  font-size: var(--t-h1, 22px);
+  line-height: 1.4;
+  color: var(--t-head, #1f2328);
+  margin: 26px 0 14px;
+  font-weight: 700;
+  text-align: var(--t-h1-align, left);
+  letter-spacing: var(--t-h1-ls, normal);
+  border: 0;
+  border-bottom: var(--t-h1-border, none);
+  padding-bottom: var(--t-h1-pb, 0);
+}
+
+.markdown-body.mn-theme h2 {
+  font-size: var(--t-h2, 19px);
+  color: var(--t-head, #1f2328);
+  margin: 24px 0 12px;
+  font-weight: 700;
+  line-height: 1.5;
+  border: 0;
+  border-left: var(--t-h2-bl, none);
+  border-bottom: var(--t-h2-bb, none);
+  padding: 0 0 0 0;
+  padding-left: var(--t-h2-pl, 0);
+  padding-bottom: var(--t-h2-pb, 0);
+  background: var(--t-h2-bg, transparent);
+  border-radius: var(--t-h2-radius, 0);
+}
+
+.markdown-body.mn-theme h3 {
+  font-size: 16px;
+  color: var(--t-h3-color, var(--t-head, #1f2328));
+  margin: 20px 0 10px;
+  font-weight: 700;
+  border: 0;
+  border-left: var(--t-h3-bl, none);
+  padding-left: var(--t-h3-pl, 0);
+}
+
+.markdown-body.mn-theme h4,
+.markdown-body.mn-theme h5,
+.markdown-body.mn-theme h6 {
+  font-size: 15px;
+  color: var(--t-head, #1f2328);
+  margin: 18px 0 8px;
+  font-weight: 700;
+}
+
+.markdown-body.mn-theme p {
+  margin: 12px 0;
+  letter-spacing: inherit;
+}
+
+.markdown-body.mn-theme blockquote {
+  margin: 14px 0;
+  padding: 10px 16px;
+  border: 0;
+  border-left: var(--t-quote-bl, 4px solid #3b82f6);
+  background: var(--t-quote-bg, #f5f9ff);
+  color: var(--t-quote-color, #5c6370);
+  font-size: var(--t-quote-fs, 14px);
+  border-radius: var(--t-quote-radius, 0 6px 6px 0);
+}
+
+.markdown-body.mn-theme blockquote p {
+  margin: 4px 0;
+  color: inherit;
+}
+
+.markdown-body.mn-theme ul,
+.markdown-body.mn-theme ol {
+  margin: 12px 0;
+  padding-left: 26px;
+}
+
+.markdown-body.mn-theme li {
+  margin: 6px 0;
+  color: var(--t-text, #333);
+}
+
+.markdown-body.mn-theme a {
+  color: var(--t-link, #3b82f6);
+  text-decoration: none;
+  border: 0;
+  border-bottom: var(--t-link-border, 1px solid rgba(59, 130, 246, 0.35));
+  padding-bottom: 0;
+}
+
+.markdown-body.mn-theme img {
+  max-width: 100%;
+  border-radius: var(--t-img-radius, 6px);
+  display: block;
+  margin: 12px auto;
+}
+
+.markdown-body.mn-theme hr {
+  border: 0;
+  border-top: var(--t-hr, 1px dashed #e3e6eb);
+  margin: 22px 0;
+  height: 0;
+}
+
+.markdown-body.mn-theme code:not(pre code) {
+  background: var(--t-inline-bg, #f2f4f7);
+  color: var(--t-inline-color, #d6336c);
+  padding: 2px 6px;
+  border-radius: var(--t-inline-radius, 4px);
+  font-size: 13px;
+  margin: 0 2px;
+}
+
+.markdown-body.mn-theme pre {
+  margin: 16px 0;
+  padding: 14px 16px;
+  background: var(--t-pre-bg, #f7f8fa);
+  border: 1px solid var(--t-pre-border, #eceef2);
+  border-radius: var(--t-pre-radius, 8px);
+  font-size: 13px;
+  line-height: 1.7;
+  overflow-x: auto;
+}
+
+.markdown-body.mn-theme pre code {
+  background: transparent;
+  color: inherit;
+  padding: 0;
+  margin: 0;
+  font-size: 13px;
+}
+
+.markdown-body.mn-theme table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+  font-size: 14px;
+}
+
+.markdown-body.mn-theme th,
+.markdown-body.mn-theme td {
+  border: 1px solid var(--t-table-border, #e3e6eb);
+  padding: 8px 12px;
+  text-align: left;
+}
+
+.markdown-body.mn-theme th {
+  background: var(--t-th-bg, #f5f7fa);
+  color: var(--t-head, #1f2328);
+  font-weight: 600;
+}
+
+/* ---------- 1. 蓝调 ---------- */
+.markdown-body.mn-t-blue {
+  --t-text: #333;
+  --t-head: #1f2328;
+  --t-main: #3b82f6;
+  --t-h1-border: 1px solid #eee;
+  --t-h1-pb: 8px;
+  --t-h2-bl: 4px solid #3b82f6;
+  --t-h2-pl: 10px;
+  --t-quote-bg: #f5f9ff;
+  --t-quote-color: #5c6370;
+  --t-inline-bg: #f2f4f7;
+  --t-inline-color: #d6336c;
+  --t-pre-bg: #f7f8fa;
+  --t-pre-border: #eceef2;
+  --t-table-border: #e3e6eb;
+  --t-th-bg: #f5f7fa;
+  --t-link: #3b82f6;
+}
+
+/* ---------- 2. 青野 ---------- */
+.markdown-body.mn-t-green {
+  --t-text: #33413a;
+  --t-head: #1f3a2c;
+  --t-main: #10b981;
+  --t-h1-border: 1px solid #d5ece1;
+  --t-h1-pb: 8px;
+  --t-h2-bb: 2px solid #10b981;
+  --t-h2-pb: 6px;
+  --t-quote-bg: #effaf5;
+  --t-quote-color: #567a68;
+  --t-inline-bg: #f0f7f3;
+  --t-inline-color: #0b7a5b;
+  --t-pre-bg: #f4faf7;
+  --t-pre-border: #dcece3;
+  --t-table-border: #dcece3;
+  --t-th-bg: #eff7f3;
+  --t-link: #0e9f6e;
+  --t-link-border: 1px solid rgba(16, 185, 129, 0.35);
+}
+
+/* ---------- 3. 暖橙 ---------- */
+.markdown-body.mn-t-orange {
+  --t-text: #3d3630;
+  --t-head: #33251a;
+  --t-main: #f59e0b;
+  --t-h1-border: 1px solid #f3e3cb;
+  --t-h1-pb: 8px;
+  --t-h2-bg: #fff4e6;
+  --t-h2-bl: 4px solid #f59e0b;
+  --t-h2-pl: 12px;
+  --t-h2-radius: 6px;
+  --t-h2-padding-custom: 6px 12px;
+  --t-quote-bg: #fff7ec;
+  --t-quote-color: #8a6a42;
+  --t-inline-bg: #fdf1e3;
+  --t-inline-color: #c2410c;
+  --t-pre-bg: #fdf8f2;
+  --t-pre-border: #f0e2cf;
+  --t-table-border: #f0e2cf;
+  --t-th-bg: #fff7ec;
+  --t-link: #ea8a0a;
+  --t-link-border: 1px solid rgba(234, 138, 10, 0.35);
+}
+
+/* ---------- 4. 紫罗兰 ---------- */
+.markdown-body.mn-t-purple {
+  --t-text: #3a3350;
+  --t-head: #2e2452;
+  --t-main: #8b5cf6;
+  --t-h1-border: 1px solid #e6dffa;
+  --t-h1-pb: 8px;
+  --t-h2-bg: #f6f2ff;
+  --t-h2-bl: 4px solid #8b5cf6;
+  --t-h2-pl: 12px;
+  --t-h2-radius: 8px;
+  --t-quote-bg: #f6f2ff;
+  --t-quote-color: #6b5f8a;
+  --t-inline-bg: #f3efff;
+  --t-inline-color: #7c3aed;
+  --t-pre-bg: #f8f5ff;
+  --t-pre-border: #e8e0fa;
+  --t-table-border: #e8e0fa;
+  --t-th-bg: #f6f2ff;
+  --t-link: #7c3aed;
+  --t-link-border: 1px solid rgba(124, 58, 237, 0.35);
+}
+
+/* ---------- 5. 墨印（报刊衬线） ---------- */
+.markdown-body.mn-t-ink {
+  --t-text: #1a1a1a;
+  --t-head: #000;
+  --t-main: #1a1a1a;
+  --t-font: Georgia, "Songti SC", SimSun, "Times New Roman", serif;
+  --t-ls: 0.6px;
+  --t-h1: 24px;
+  --t-h1-align: center;
+  --t-h1-ls: 2px;
+  --t-h1-border: none;
+  --t-h2-bl: 3px solid #1a1a1a;
+  --t-h2-pl: 10px;
+  --t-h3-bl: 2px solid #1a1a1a;
+  --t-h3-pl: 8px;
+  --t-quote-bg: #fafafa;
+  --t-quote-color: #555;
+  --t-quote-radius: 0;
+  --t-inline-bg: #f5f5f5;
+  --t-inline-color: #1a1a1a;
+  --t-pre-bg: #fbfbfb;
+  --t-pre-border: #e5e5e5;
+  --t-pre-radius: 2px;
+  --t-table-border: #d9d9d9;
+  --t-th-bg: #f5f5f5;
+  --t-link: #1a1a1a;
+  --t-link-border: 1px solid #1a1a1a;
+  --t-hr: 1px solid #d9d9d9;
+  --t-img-radius: 2px;
+}
+
+/* ---------- 6. 极简 ---------- */
+.markdown-body.mn-t-minimal {
+  --t-text: #444;
+  --t-head: #111;
+  --t-main: #111;
+  --t-h1: 21px;
+  --t-h1-border: none;
+  --t-h2: 18px;
+  --t-h3-color: #222;
+  --t-quote-bg: transparent;
+  --t-quote-color: #888;
+  --t-quote-bl: 2px solid #ddd;
+  --t-quote-radius: 0;
+  --t-inline-bg: #f5f5f5;
+  --t-inline-color: #111;
+  --t-pre-bg: #fafafa;
+  --t-pre-border: #eee;
+  --t-pre-radius: 4px;
+  --t-table-border: #eee;
+  --t-th-bg: transparent;
+  --t-link: #111;
+  --t-link-border: 1px solid #bbb;
+  --t-hr: 1px solid #eee;
+  --t-img-radius: 4px;
+}
+
+/* ---------- 7. 科技 ---------- */
+.markdown-body.mn-t-tech {
+  --t-text: #1f2937;
+  --t-head: #0f172a;
+  --t-main: #2563eb;
+  --t-h1-border: 1px solid #dbe3f1;
+  --t-h1-pb: 8px;
+  --t-h2-bg: #eef3ff;
+  --t-h2-bl: 4px solid #2563eb;
+  --t-h2-pl: 12px;
+  --t-h2-radius: 4px;
+  --t-h3-bl: 3px solid #2563eb;
+  --t-h3-pl: 8px;
+  --t-quote-bg: #f1f5fd;
+  --t-quote-color: #475569;
+  --t-inline-bg: #eef2ff;
+  --t-inline-color: #1d4ed8;
+  --t-pre-bg: #f4f7fb;
+  --t-pre-border: #dbe3f1;
+  --t-pre-radius: 6px;
+  --t-table-border: #dbe3f1;
+  --t-th-bg: #eef3ff;
+  --t-link: #2563eb;
+  --t-link-border: 1px solid rgba(37, 99, 235, 0.35);
+}
+
+/* ---------- 8. 暖纸 ---------- */
+.markdown-body.mn-t-paper {
+  --t-text: #4a4034;
+  --t-head: #3a2f22;
+  --t-main: #c08a3e;
+  --t-font: "Songti SC", SimSun, Georgia, serif;
+  --t-ls: 0.5px;
+  --t-lh: 1.9;
+  --t-page: #fdf9f1;
+  --t-page-padding: 24px 22px;
+  --t-page-radius: 4px;
+  --t-h1-border: 1px solid #e0d2b8;
+  --t-h1-pb: 10px;
+  --t-h1-align: center;
+  --t-h2-bb: 1px dashed #d6c3a0;
+  --t-h2-pb: 6px;
+  --t-quote-bg: #f7efe0;
+  --t-quote-color: #7a6852;
+  --t-inline-bg: #f5ecdc;
+  --t-inline-color: #8a5a1a;
+  --t-pre-bg: #f7f1e5;
+  --t-pre-border: #e8dcc5;
+  --t-table-border: #e8dcc5;
+  --t-th-bg: #f5ecdc;
+  --t-link: #a4711f;
+  --t-link-border: 1px solid rgba(164, 113, 31, 0.35);
+  --t-hr: 1px solid #e0d2b8;
+  --t-img-radius: 3px;
+}
+
+/* ---------- 9. 夜色 ---------- */
+.markdown-body.mn-t-night {
+  --t-text: #d7dce5;
+  --t-head: #ffffff;
+  --t-main: #6ea8ff;
+  --t-page: #1c212b;
+  --t-page-padding: 24px 22px;
+  --t-page-radius: 12px;
+  --t-h1-border: 1px solid #333c4d;
+  --t-h1-pb: 10px;
+  --t-h2-bl: 3px solid #6ea8ff;
+  --t-h2-pl: 10px;
+  --t-quote-bg: #232a37;
+  --t-quote-color: #9aa5b8;
+  --t-inline-bg: #2a3140;
+  --t-inline-color: #ff9db1;
+  --t-pre-bg: #f6f8fa;
+  --t-pre-border: #d7dce5;
+  --t-table-border: #333c4d;
+  --t-th-bg: #262e3c;
+  --t-link: #79b0ff;
+  --t-link-border: 1px solid rgba(121, 176, 255, 0.4);
+  --t-hr: 1px solid #333c4d;
+  --t-img-radius: 8px;
+}
+
+/* ---------- 10. 糖果 ---------- */
+.markdown-body.mn-t-candy {
+  --t-text: #4a3b42;
+  --t-head: #3a2a32;
+  --t-main: #ff5c8a;
+  --t-h1-border: 2px solid #ffd9e6;
+  --t-h1-pb: 8px;
+  --t-h2-bg: #fff1f6;
+  --t-h2-pl: 16px;
+  --t-h2-radius: 999px;
+  --t-quote-bg: #fff1f6;
+  --t-quote-color: #8a6273;
+  --t-quote-radius: 8px;
+  --t-inline-bg: #ffeaf1;
+  --t-inline-color: #e11d63;
+  --t-inline-radius: 999px;
+  --t-pre-bg: #fff5f8;
+  --t-pre-border: #ffd9e6;
+  --t-pre-radius: 12px;
+  --t-table-border: #ffd9e6;
+  --t-th-bg: #fff1f6;
+  --t-link: #f04e7f;
+  --t-link-border: 1px solid rgba(240, 78, 127, 0.35);
+  --t-img-radius: 12px;
+}
+
+/* 带底色的二级标题需要上下内边距，单独补齐 */
+.markdown-body.mn-t-orange h2 {
+  padding: 6px 12px;
+}
+.markdown-body.mn-t-purple h2,
+.markdown-body.mn-t-tech h2 {
+  padding: 6px 12px;
+}
+.markdown-body.mn-t-candy h2 {
+  padding: 6px 16px;
+}
