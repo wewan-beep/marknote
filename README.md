@@ -286,17 +286,15 @@ cd marknote-web && npm run build      # 产物在 dist/
 新增一套排版主题只需两处：`marknote-web/src/styles/themes.css` 加一组 CSS 变量，`src/theme/themes.js` 加一条主题描述。
 
 ---
-
-## 开源协议
-
-[MIT](LICENSE) © MarkNote
-
 界面截图见 [`docs/images/`](docs/images/)，图文操作手册见 [`docs/功能介绍与操作指南.md`](docs/功能介绍与操作指南.md)。
 
 ## 请作者喝杯奶茶吧！
 <img width="300" src='docs/images/pay-wx.jpg'>  <img width="300" src='docs/images/pay-zfb.jpg'>
 
 ## 更多开源项目分享请关注：夜入烟雨（微信公众号）
+---
+<img width="500" src='docs/images/gzh_ss.png'> 
+---
+## 开源协议
 
-![公众号](docs/images/gzh_ss.png)
-
+[MIT](LICENSE) © MarkNote
