@@ -1,0 +1,7 @@
+# 强制指定.vue文件识别为Vue
+*.vue linguist-language=Vue
+*.java linguist-language=Java
+# 排除第三方依赖目录，不参与语言统计
+node_modules/* linguist-vendored
+# 排除文档目录，避免影响代码占比统计
+docs/* linguist-documentation
