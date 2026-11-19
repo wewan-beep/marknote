@@ -2,11 +2,11 @@
 
 **Markdown 笔记系统：左边写 Markdown，右边出公众号排版，写完一键复制，粘到公众号后台不掉格式。**
 
+> **📖 项目介绍主页：https://wewan-beep.github.io/marknote/**
+---
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)[![JDK](https://img.shields.io/badge/JDK-17-orange.svg)](https://adoptium.net/)[![Vue](https://img.shields.io/badge/Vue-3.x-42b883.svg)](https://vuejs.org/)[![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.2-brightgreen.svg)](https://spring.io/projects/spring-boot)[![MySQL](https://img.shields.io/badge/MySQL-8.0-4479A1.svg)](https://www.mysql.com/)[![MinIO](https://img.shields.io/badge/MinIO-S3%20API-C7202C.svg)](https://min.io/)
 
 前后端分离的完整工程，不是 demo：Vue3 + Vite + Element Plus 前端，Spring Boot 3 + MyBatis-Plus + MySQL 8 + MinIO 后端，JWT 鉴权，`docker compose` 一键起依赖，Windows 有双击启动脚本。
-
-> 📖 完整图文操作手册见 [`docs/功能介绍与操作指南.md`](docs/功能介绍与操作指南.md)
 
 ---
 ## 请关注公众号，有更多精彩内容分享
