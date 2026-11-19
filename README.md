@@ -295,3 +295,8 @@ cd marknote-web && npm run build      # 产物在 dist/
 
 ## 请作者喝杯奶茶吧！
 <img width="300" src='docs/images/pay-wx.jpg'>  <img width="300" src='docs/images/pay-zfb.jpg'>
+
+## 更多开源项目分享请关注：夜入烟雨（微信公众号）
+
+![公众号](docs/images/gzh_ss.png)
+
