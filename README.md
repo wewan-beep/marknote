@@ -294,7 +294,9 @@ cd marknote-web && npm run build      # 产物在 dist/
 ## 更多开源项目分享请关注：夜入烟雨（微信公众号）
 ---
 <img width="500" src='docs/images/gzh_ss.png'> 
----
+
+--- 
+
 ## 开源协议
 
 [MIT](LICENSE) © MarkNote
