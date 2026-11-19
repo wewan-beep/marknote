@@ -9,6 +9,9 @@
 > 📖 完整图文操作手册见 [`docs/功能介绍与操作指南.md`](docs/功能介绍与操作指南.md)
 
 ---
+## 请关注公众号，有更多精彩内容分享
+![公众号](docs/images/gzh_ewm.jpg)
+
 
 ## 界面预览
 
@@ -289,8 +292,6 @@ cd marknote-web && npm run build      # 产物在 dist/
 [MIT](LICENSE) © MarkNote
 
 界面截图见 [`docs/images/`](docs/images/)，图文操作手册见 [`docs/功能介绍与操作指南.md`](docs/功能介绍与操作指南.md)。
-## 公众号
-<img width="500" src='docs/images/gzh-ewm.jpg'>
 
 ## 请作者喝杯奶茶吧！
 <img width="300" src='docs/images/pay-wx.jpg'>  <img width="300" src='docs/images/pay-zfb.jpg'>
